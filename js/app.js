@@ -117,11 +117,13 @@ const app = {
       </div>`;
     }
 
-    // extra prose sections (optional, for hand-authored richness)
+    // extra prose sections (optional, for hand-authored richness).
+    // `html` is injected raw (for diagrams/figures); `body` goes through markdown + escaping.
     if (ch.sections) {
       ch.sections.forEach(s => {
-        h += `<h2>${escapeHtml(s.h)}</h2>`;
-        h += this.mdToP(s.body);
+        if (s.h) h += `<h2>${escapeHtml(s.h)}</h2>`;
+        if (s.html) h += s.html;
+        if (s.body) h += this.mdToP(s.body);
       });
     }
 
