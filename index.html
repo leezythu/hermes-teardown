@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hermes 拆解 — 从 ReAct 循环到生产级 Agent Harness</title>
+  <meta name="description" content="对 Hermes Agent 的逐层拆解:一个最简单的 ReAct 循环,如何一个功能一个功能地成长为生产级的 Agent Harness。每一步都配有真实代码讲解。" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<body>
+  <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+  <div id="scrim" class="scrim"></div>
+
+  <div class="progress-bar"><div id="progress-fill" class="progress-bar-fill"></div></div>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar">
+      <div class="brand">
+        <div class="brand-title" onclick="location.hash='#/'">
+          <span class="brand-caduceus">☤</span> Hermes 拆解
+        </div>
+        <div class="brand-sub">react 循环 → agent harness</div>
+      </div>
+      <nav id="nav"></nav>
+    </aside>
+
+    <main class="content">
+      <div id="content-inner" class="content-inner"></div>
+    </main>
+  </div>
+
+  <script src="js/highlight.js"></script>
+  <script src="data/chapters.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
