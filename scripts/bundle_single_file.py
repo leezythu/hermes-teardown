@@ -7,7 +7,7 @@ Result: double-click to open, no server, no relative paths, no proxy.
 """
 import base64, pathlib, re
 
-ROOT = pathlib.Path('/mnt/hdfs/lizhenyu/hermes-tutorial-site')
+ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / 'hermes-teardown.html'
 
 css = (ROOT / 'css/style.css').read_text(encoding='utf-8')
